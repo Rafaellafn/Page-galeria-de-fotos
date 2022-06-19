@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./imagens/bg.jpg);
+  background-size: cover;
+}
+
+.container {
+  width: 80vw;
+  height: 700px;
+  background-color:#ffffff66;
+  border: 2px solid #ffffff99;
+  margin: 10vh auto;
+  border-radius: 5px;
+}
+
+.filter__btns {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.btn:not(:first-child) {
+  margin-left: 30px;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn.active {
+  background-color: #fff;
+}
