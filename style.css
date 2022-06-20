@@ -49,10 +49,22 @@ body {
 
 .filter__imgs {
   margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 210px);
+  grid-gap:20px;
+  justify-content: center;
+
 }
 
 .filter__imgs img {
   width: 210px;
   height: 200;
   object-fit: cover;
+  border: 2px solid #ffffff99;
+  border-radius: 5px;
+}
+
+.filter__imgs img:hover {
+  transform: scale(1.2);
+  transition: transform .3s ease;
 }
