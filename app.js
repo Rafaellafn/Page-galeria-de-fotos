@@ -28,6 +28,7 @@ const makeActiveBtn = (event) => {
 };
 
 const filterImage = (category) => {
-  const images = document.querySelectorAll(".filter__imgs img");
-  console.log(images);
-}
+  const images = Array.from(document.querySelectorAll(".filter__imgs img"));
+
+};
+
