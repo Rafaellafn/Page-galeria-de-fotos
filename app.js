@@ -30,5 +30,10 @@ const makeActiveBtn = (event) => {
 const filterImage = (category) => {
   const images = Array.from(document.querySelectorAll(".filter__imgs img"));
 
+  images.forEach(img => {
+    img.classList.add("hide");
+  });
+
+  
 };
 
