@@ -34,6 +34,14 @@ const filterImage = (category) => {
     img.classList.add("hide");
   });
 
-  
+  const filterdImages = images.filter(
+    (img) => 
+    img.getAttribute("data-image") === category || 
+    img.getAttribute("data-all") === category
+    );
+
+    filterdImages.forEach(img => {
+      img.classList.remove("hide");
+    });
 };
 
