@@ -7,6 +7,7 @@
 body {
   background-image: url(./imagens/bg.jpg);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .container {
@@ -20,7 +21,9 @@ body {
 
 .filter__btns {
   margin-top: 50px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
@@ -39,6 +42,26 @@ body {
   margin-left: 30px;
 }
 
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90vw;
+    margin: 3vh auto;
+  }
+  .filter__btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  .btn:not(:first-child) {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
 .btn:hover {
   background-color: #fff;
 }
@@ -50,10 +73,10 @@ body {
 .filter__imgs {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(4, 210px);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   grid-gap:20px;
   justify-content: center;
-
+  padding: 10px;
 }
 
 .filter__imgs img {
@@ -77,8 +100,8 @@ body {
 @keyframes show {
   0% {
     transform: Translate(-50%, 100%) scale(0);
-}
-100% {
+  }
+  100% {
    transform: translate(0, 0) scale(1);
-}
+  }
 }
